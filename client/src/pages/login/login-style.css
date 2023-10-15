@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-main: #2B2D42;
+    --color-two: #8789C0;
+    --color-three: #5BC0BE;
+}
+
+
+.container-main-login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-main);
+}
+
+.container-left-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100%;
+
+    padding: 20px;
+}
+
+.box-img-logo-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.img-logo {
+    width: 7rem;
+}
+
+.title-logo {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-three);
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    padding: 5px;
+}
+
+.box-buttons-form-login {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.button-form-login-register {
+    background-color: transparent;
+    border: none;
+
+    color: white;
+    cursor: pointer;
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container-right-login {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #5BC0BE;
+    background-image: url(./../../assets/img-bg-login-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+@media(max-width:1444px) {
+    .img-logo {
+        width: 4rem;
+    }
+
+    .title-logo {
+        font-size: 2em;
+    }
+
+}
+
+@media(max-width:1024px) {
+    .container-right-login {
+        display: none;
+    }
+
+    .container-left-login {
+        width: 100%;
+        padding: 15px 0px;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media(max-width:525px) {
+    .container-form {
+        width: 100%;
+    }
+    .container-main-login {
+        min-height: 100vh;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#8789c071;
+    
+}

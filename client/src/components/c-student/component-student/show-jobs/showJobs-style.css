@@ -1,0 +1,111 @@
+.container-show-jobs{
+    min-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--color-main);
+}
+
+
+
+.sub-container-show-jobs {
+    width: 60%;
+    height: 40rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 35px;
+    background-color: var(--color-three);
+    border-radius: 20px;
+}
+
+.box-top-data-company {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.title-show-jobs {
+    font-size: 2.5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    color: var(--color-main);
+}
+
+.title-show-company,
+.title-show-location-company {
+    font-size: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+.show-functions-jobs {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+
+.title-functions-jobs {
+    font-size: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    color: var(--color-main);
+}
+
+.text-functions-jobs {
+    font-size: 1em;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 20px;
+}
+
+.box-buttons-show-jobs {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sent-show-jobs,
+.closed-show-jobs {
+    background-color: white;
+   
+
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Ubuntu', sans-serif;
+
+    width: 15rem;
+    height: 4rem;
+    border-radius: 15px;
+    color:var(--color-three);
+
+    cursor: pointer;
+}
+
+.sent-show-jobs{
+    background-color: var(--color-two);
+    color: white;
+}

@@ -1,0 +1,72 @@
+.box-jobs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+
+    padding: 15px;
+    background-color: var(--color-two);
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
+
+.img-company-job{
+    height: 75px;
+    border-radius: 15px;
+}
+
+
+.data-jobs{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    gap: .5rem;
+    width: 100%;
+}
+
+.title-jobs{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.name-company-jobs{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+.location-company-jobs{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.box-button-show-jobs{
+    width: 30%;
+
+}
+
+.button-show-jobs{
+    background-color: var(--color-three);
+    border: none;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 15px;
+
+    font-size: 1em;
+    font-weight:800;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+.button-show-jobs:hover{
+    border: 1px solid white;
+}
+
+
+

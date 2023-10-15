@@ -1,0 +1,122 @@
+
+
+
+.box-show-jobs-company{
+    width: 100%;
+    min-height: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--color-two);
+    border-radius: 20px;
+    padding: 15px;
+    
+}
+
+.box-titles-show-jobs-company{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+
+    width: 40%;
+    height: auto;
+}
+
+.title-show-jobs-company,.location-show-jobs-company, .date-show-jobs-company{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-weight: 500;
+} 
+
+
+
+
+
+
+
+.box-description-show-jobs-company{
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.box-buttons-show-jobs-company{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-delete-job-company{
+    background-color: #d54c4c;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    color: white;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.box-showDeleteJobs-company{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 5rem;
+    
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button-confirm-delete-job{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    
+    border: none;
+    cursor: pointer;
+}
+
+
+.button-show-description-jobs-company{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+
+    width: 8rem;
+  
+    
+
+    gap: 10px;
+
+    color: black;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.description-show-jobs{
+    font-family: 'Ubuntu', sans-serif;
+    width: 80%;
+    text-align:left;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 5px;
+}

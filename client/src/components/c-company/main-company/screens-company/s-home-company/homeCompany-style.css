@@ -1,0 +1,27 @@
+.container-home-jobs-company{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.container-register-jobs-home-company{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-show-jobs-home-company{
+    
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}

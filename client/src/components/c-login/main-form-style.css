@@ -1,0 +1,53 @@
+.box-render-form {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    gap: 2rem;
+}
+
+.box-button-render-form {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-render-form {
+    background-color: var(--color-main);
+
+    width: 10rem;
+    height: 3rem;
+    border: 3px solid var(--color-three);
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.button-render-form:hover {
+    border-color: #5bc0bebb;
+}
+
+.button-text-render-form {
+    color: var(--color-three);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@media(max-width:525px) {
+    .box-render-form {
+        width: 100%;
+    }
+    .button-render-form{
+        width: 8rem;
+        font-size: .7em;
+    }
+}

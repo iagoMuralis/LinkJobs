@@ -1,0 +1,37 @@
+.container-home-jobs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.box-title-top-screen{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+.title-top-screen{
+    font-family:'Ubuntu', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-two);
+}
+
+.content-home-jobs{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 70%;
+    height: auto;
+    
+}
+
+

@@ -1,0 +1,131 @@
+.container-form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 25rem;
+
+    flex-direction: column;
+    background-color: var(--color-two);
+    border-radius: 15px;
+    padding: 20px 15px;
+    
+}
+
+.box-input-login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.name-input{
+    color: var(--color-main);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-left: 12px;
+}
+
+.input-form{
+    width: 100%;
+    height: 2.5rem;
+
+    font-size: 1em;
+
+    border: none;
+
+    padding-left: 15px;
+    outline: none;
+
+    border-radius:15px;
+    text-align: left;
+}
+
+.input-form::placeholder{
+    color: silver;
+    font-size: .8em
+}
+
+[type="password"]{
+    color: var(--color-three);
+}
+
+.box-button-form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+}
+
+.button-form-login{
+    background-color: var(--color-three);
+
+    border-radius: 20px;
+    border: none;
+    color: white;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+
+    width: 15rem;
+    height: 3rem;
+
+    cursor: pointer;
+}
+
+.name-checkbox{
+    font-size: 1em;
+}
+
+.option-placeholder{
+    color: silver;
+    font-size: .8em
+}
+
+.input-password-visible{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-main);
+    cursor: pointer;
+
+    background-color: white;
+    padding-right: 5px;
+    border-radius: 15px;
+}
+
+
+.message-error{
+    color: darkred;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.color-company-form-login{
+    background-color: var(--color-three);
+    
+}
+.color-company-name-input{
+    color: white;
+}
+
+.button-color-company{
+    background-color: var(--color-main);
+    
+}
+
+@media(max-width:525px){
+    .container-form-login{
+    width: 100%;
+    }
+    .button-form-login{
+        width: 12rem;
+        height: 3rem;
+    }
+}

@@ -1,0 +1,123 @@
+header {
+    background-color: var(--color-main);
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header-menu-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 4rem;
+}
+
+.img-logo-header {
+    height: 3rem;
+}
+
+.box-input-button-menu {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 3rem;
+}
+
+.box-input-search-menu {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+
+    padding: 0 7px;
+
+    border-radius: 10px;
+    height: 2rem;
+}
+
+.name-company-student{
+    font-family:'Ubuntu', sans-serif;
+    color: var(--color-two);
+}
+
+.input-search-header {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button-menu-header {
+    background-color: transparent;
+    border: none;
+    color: var(--color-three);
+
+    cursor: pointer;
+}
+
+.header-menu-low {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-three);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-buttons-header-low {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    height: auto;
+    padding: 5px 0;
+
+}
+
+.box-button-name-header-low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.box-button-name-header-low:hover{
+    transform: scale(1.05);
+}
+
+
+.button-menu-header-low {
+    background-color: transparent;
+    color: var(--color-main);
+    border: none;
+    cursor: pointer;
+}
+
+.text-button-menu-header-low {
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+
+
+.box-header-img-logo-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 1.1em;
+    color: var(--color-three);
+    font-family: 'Ubuntu', sans-serif;
+}

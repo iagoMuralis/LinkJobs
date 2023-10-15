@@ -1,0 +1,119 @@
+.container-register-jobs-company{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title-register-jobs-company{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    color: var(--color-two);
+}
+
+.form-inputs-register-jobs{
+    margin-top: 2rem;
+
+    background-color: var(--color-two);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:20px 30px;
+
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+.box-left-right-inputs-register-jobs{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.box-inputs-register-jobs-left{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    width: 40%;
+}
+
+.box-inputs-register-jobs-right{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.box-input-register-jobs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-label-input-register-jobs{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    color: var(--color-main);
+}
+
+.input-register-jobs{
+    width: 20rem;
+    height: 2rem;
+
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    outline: none;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+}
+
+.box-button-submit-register-jobs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.textarea-register-jobs{
+    width: 100%;
+    min-height: 10rem;
+    resize: none; 
+
+    border: none;
+    border-radius: 10px;
+    
+    outline: none;
+    padding: 5px;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;/* Impede a redimensionamento */
+}
+
+
+.button-submit-register-jobs{
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1em;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--color-three);
+    
+}
+
+.button-submit-register-jobs:hover{
+    border: 1px solid white;
+   
+}
+
