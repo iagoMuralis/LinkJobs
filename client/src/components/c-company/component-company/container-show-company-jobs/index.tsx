@@ -22,18 +22,23 @@ export default function ShowJobsCompany({ dataCompany }: consultJobsProps) {
     const [itemJob, setItemJob] = useState<consultJobsProps[]>([])
 
 
-    
+    useEffect(() => {
         const ConsultJobsCompany = async () => {
             const resultJobs: any = await functionConsultJobsCompany(IDCompany);
             setItemJob(resultJobs);
         }
-       
-        ConsultJobsCompany();
-    
+        ConsultJobsCompany()
+    }, [])
 
-    const handleDeleteJob = async(item:string) => {
+
+
+
+
+    const handleDeleteJob = async (item: string) => {
         const IDJob = item.id;
-        await functionDeleteJobsCompany(IDJob)
+        await functionDeleteJobsCompany(IDJob);
+        window.location.reload();
+
     }
 
 
@@ -48,16 +53,16 @@ export default function ShowJobsCompany({ dataCompany }: consultJobsProps) {
             <div className="container-render-box-show-jobs">
 
 
-                 {itemJob.map((item, index) => (
+                {itemJob.map((item, index) => (
                     <BoxShowJobsCompany
                         key={index}
                         titleJob={item.namejob}
                         locationJob={item.locationjob}
                         dateJob={item.date}
                         descriptionJob={item.descriptionjob}
-                        buttonDeleteJob={()=>handleDeleteJob(item)}
+                        buttonDeleteJob={() => handleDeleteJob(item)}
                     />
-                ))} 
+                ))}
 
 
             </div>

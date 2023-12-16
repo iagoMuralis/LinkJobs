@@ -43,11 +43,9 @@ export default function FormCompanyRegister({ toggleForm }: FormCompanyRegisterP
 
             toggleForm();//para mudar de componente
 
-        } catch (error) {
-            
+        } catch (error) {     
                 setErrorLogin(true)
                 setLoadingButton(false);
-   
         }
     }
 

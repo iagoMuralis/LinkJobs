@@ -1,0 +1,26 @@
+.container-profile-student{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.box-title-profile-student{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-profile-student{
+    color: var(--color-two);
+    font-size: 2em;
+}
+
+
+
+

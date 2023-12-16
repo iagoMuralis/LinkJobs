@@ -4,12 +4,6 @@ export const functionRegisterJobs = async (data: any) =>{
     try{
         await api.post('/jobs/register', data);
         console.log('job cadastrado')
-
-        const IDCompany = data.IDCompany;
-        console.log('esse é o id', IDCompany)
-        const resultJobs = await api.get(`/jobs/company/consult/${IDCompany}`);
-        return resultJobs;
-        
     }catch(error){
         console.error('erro ao cadastrar empresa', error)
         throw new Error('Erro ao cadastrar estudante');

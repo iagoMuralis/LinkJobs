@@ -35,7 +35,7 @@ export default function RegisterJobs({ dataCompany }: RegisterJobsProps) {
             
             await functionRegisterJobs(jobData);
 
-            await functionConsultJobsCompany(IDCompany)
+            window.location.reload();
 
             reset()
           

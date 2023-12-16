@@ -65,9 +65,9 @@ export default function FormStudentRegister({ toggleForm }: FormCompanyStudentPr
                 <label className="name-input">Universidade</label>
                 <select id="university" className="input-form select-register" required {...register("university")}>
                     <option value='' ></option>
-                    <option value='umc'>Universidade Mogi das Cruzes (UMC)</option>
-                    <option value='ubc'>Universidade Braz Cubas (UBC)</option>
-                    <option value='fatec'>Fatec Mogi das Cruzes</option>
+                    <option value='Universidade Mogi das Cruzes (UMC)'>Universidade Mogi das Cruzes (UMC)</option>
+                    <option value='Universidade Braz Cubas (UBC)'>Universidade Braz Cubas (UBC)</option>
+                    <option value='Fatec Mogi das Cruzes'>Fatec Mogi das Cruzes</option>
                 </select>
             </div>
 

@@ -1,0 +1,132 @@
+.container-form-login-profile{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.box-img-profile{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-profile-student{
+    border-radius: 100%;
+    height: 15rem;
+    border: 7px solid var(--color-three);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+
+.form-login-profile-student{
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    
+}
+
+
+.box-inputs-profile-student{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.name-label-input-profile-student{
+    color: black;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+.input-profile-student{
+    width: 20rem;
+    height: 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+
+
+.box-buttons-confirm-profile-student{
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+
+}
+
+.button-profile-student{
+    width: 7rem;
+    height: 2rem;
+    background-color: var(--color-three);
+
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* lado direito  */
+
+
+.container-form-info-profile-student{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+    padding-top: 1rem;
+}
+
+.box-title-form-info-profile{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-form-info-profile{
+    color: var(--color-main);
+    font-size: 1.5em;
+
+}
+
+.form-info-profile-student{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    
+}
+
+

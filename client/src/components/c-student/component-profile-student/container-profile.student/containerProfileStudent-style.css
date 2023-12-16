@@ -1,0 +1,24 @@
+.container-form-profile-student{
+    background-color: var(--color-two);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.container-left-form-profile, .container-right-form-profile{
+    
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    padding: 10px;
+    
+}
+
+.container-right-form-profile{
+    justify-content: center;
+}

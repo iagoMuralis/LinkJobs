@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const registerStudent = require('../../controller/student/login')
-const loginStudent = require('../../controller/student/login')
+const registerStudent = require('../../../controller/student/login')
+const loginStudent = require('../../../controller/student/login')
 
 
 
