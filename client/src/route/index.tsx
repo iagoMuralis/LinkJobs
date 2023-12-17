@@ -5,6 +5,9 @@ import Student from '../pages/student';
 import Company from '../pages/company';
 // import NotFound from '../notFound';
 
+import UpdateStudent from '../pages/update-curriculum-student';
+
+
 export default function AppRoute() {
     return (
         <Router>
@@ -14,6 +17,8 @@ export default function AppRoute() {
                 <Route path="/student" element={<Student />} />
                 <Route path="/company" element={<Company />} />
                 {/*         <Route path="*" element={<NotFound />} /> */}
+
+                <Route path="/updatestudent" element={<UpdateStudent />} />
 
             </Routes>
         </Router>

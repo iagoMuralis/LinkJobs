@@ -4,23 +4,21 @@ import FormInfoProfileStudente from '../form-info-profile-right-student';
 
 
 interface HomeStudentProps {
-    dataStudent:any;
+    dataStudent: any;
 }
 
-export default function ContainerProfileStudent({ dataStudent }: HomeStudentProps){
+export default function ContainerProfileStudent({ dataStudent }: HomeStudentProps) {
 
-    
 
-    return(
+
+    return (
         <div className="container-form-profile-student">
             <div className="container-left-form-profile">
-                    <FormLoginProfileStudent dataStudent={dataStudent}/>
+                <FormLoginProfileStudent dataStudent={dataStudent} />
             </div>
 
             <div className="container-right-form-profile">
-
-                <FormInfoProfileStudente dataStudent={dataStudent}/>
-
+                <FormInfoProfileStudente dataStudent={dataStudent} />
             </div>
 
         </div>

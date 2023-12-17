@@ -49,7 +49,7 @@ export default function ShowJobs({ onClose, titleJob, nameCompanyJob, locationJo
                     </div>
 
                     <div className="show-functions-jobs">
-                        <h1 className="title-functions-jobs">Funcionalidades e Requisitos</h1>
+                        <h1 className="title-functions-jobs">Descrição e Requisitos</h1>
                         <p className="text-functions-jobs">
                          {descriptionJob}                        
                         </p>

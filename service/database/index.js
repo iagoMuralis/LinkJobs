@@ -5,7 +5,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'linkjobs',
-    password: 'coloque a senha',
+    password: '',
     port: 5432,
 });
 

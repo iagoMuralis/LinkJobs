@@ -8,6 +8,8 @@ const routerJobs = require('./modules/routes/jobs')
 
 const routerProfileStudent = require('./modules/routes/student/profile')
 
+const routerCurriculumStudent = require('./modules/routes/student/curriculum')
+
 const cors = require('cors');
 
 app.use(cors());
@@ -17,6 +19,7 @@ app.use('/company', routerCompany)
 app.use('/student', routerStudent)
 
 app.use('/jobs', routerJobs);
+app.use('/curriculum', routerCurriculumStudent )
 
 
 app.use('/profile', routerProfileStudent)

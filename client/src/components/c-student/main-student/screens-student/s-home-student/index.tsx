@@ -3,6 +3,7 @@ import BoxJobs from '../../../component-student/box-jobs'
 import './homestudent-style.css'
 
 import { FunctionConsultJobsStudent } from '../../../component-student/function-home-student';
+import { FunctionConsultDataBaseInfoPrimaryStudent } from '../../../component-student/function-verification-database-info-student';
 
 
 interface HomeStudentProps {
@@ -20,18 +21,16 @@ interface Job {
 
 export default function HomeStudent({ dataStudent }: HomeStudentProps) {
 
-    const [itemJob, setItemJob] = useState<Job[]>([])
-
-   
-
+    const [itemJob, setItemJob] = useState<Job[]>([]);
+    
     useEffect(() => {
         const ConsultJobsStudent = async () => {
             const resultJobs: Job[] = await FunctionConsultJobsStudent();
             setItemJob(resultJobs);
         }
         ConsultJobsStudent();
-    }, [])
 
+    }, [])
 
     return (
         <main className="container-home-jobs">

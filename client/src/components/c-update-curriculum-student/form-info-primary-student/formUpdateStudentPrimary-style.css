@@ -1,0 +1,31 @@
+.form-info-student-primary{
+    width: auto;
+    height: auto;
+    
+    
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+
+
+
+
+.button-update-student{
+background-color: var(--color-three);
+
+width: 20rem;
+height: 3rem;
+font-size: 1em;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.button-update-student:hover{
+    border: 2px solid white;
+}

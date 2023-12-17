@@ -14,7 +14,9 @@ export default function FormCompanyLogin() {
     const navigate = useNavigate()
 
     const [showPassword, setShowPassword] = useState<boolean>(false);
-    const [errorLogin, setErrorLogin] = useState<boolean>(false)
+    const [errorLogin, setErrorLogin] = useState<boolean>(false);
+
+    
 
     const {
         register,
@@ -28,7 +30,6 @@ export default function FormCompanyLogin() {
         try {
             const dataCompany = await Login(data);
             navigate('/company', {state: dataCompany})
-            
         }
         catch (error) {
             if (data.password && data.email) {
@@ -45,21 +46,25 @@ export default function FormCompanyLogin() {
             <div className="box-input-login">
                 <label htmlFor="" className="name-input color-company-name-input">Email</label>
                 <input type="email" className="input-form" placeholder='Digite seu email...'
-                    {...register("email")}
+                    {...register("email", {required:true})}
                 />
+                {errors.email && <p className="message-error"> Email obrigatorio</p>}
             </div>
 
             <div className="box-input-login">
                 <label htmlFor="" className="name-input color-company-name-input">Senha</label>
                 <div className="input-password-visible"><input type={showPassword ? 'text' : 'password'} className="input-form" placeholder='Digite sua senha...'
-                    {...register("password")}
+                    {...register("password", {required:true})}
                 />
+                
                     {showPassword ? (
                         <FaEyeSlash size={25} onClick={() => setShowPassword(!showPassword)} />
                     ) : (
                         <FaEye size={25} onClick={() => setShowPassword(!showPassword)} />
                     )}
+
                 </div>
+                {errors.password && <p className="message-error"> Senha obrigatoria</p>}
             </div>
 
             {errorLogin && <p className="message-error">Usuario não encontrado !</p>}

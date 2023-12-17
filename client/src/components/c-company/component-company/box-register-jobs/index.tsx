@@ -41,7 +41,7 @@ export default function RegisterJobs({ dataCompany }: RegisterJobsProps) {
           
             
         }catch(error){
-            console.error( 'erro ')
+            console.error( 'erro')
         }
     }
 

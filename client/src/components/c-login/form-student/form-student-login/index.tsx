@@ -31,7 +31,14 @@ export default function FormStudentLogin() {
     const onSubmit = async (data: any) => {
         try {
             const dataStudent = await Login(data);
-            navigate('/student', {state: dataStudent})
+
+            if(!dataStudent.curriculum){
+                navigate('/updatestudent', {state: dataStudent})
+            }else{
+                navigate('/student', {state: dataStudent})
+            }
+
+
             
         } catch (error) {
             if (data.password && data.email) {
@@ -42,6 +49,8 @@ export default function FormStudentLogin() {
             }
 
         }
+
+       
     }
 
     return (
@@ -49,14 +58,16 @@ export default function FormStudentLogin() {
             <div className="box-input-login">
                 <label htmlFor="" className="name-input">Email</label>
                 <input type="email" className="input-form" placeholder='Digite seu email...'
-                    {...register("email")}
+                    {...register("email", {required: true})}
                 />
+
+                {errors.email && <p className='message-error'>Email obrigatorio</p>}
             </div>
 
             <div className="box-input-login">
                 <label htmlFor="" className="name-input">Senha</label>
                 <div className="input-password-visible"><input type={showPassword ? 'text' : 'password'} className="input-form" placeholder='Digite sua senha...'
-                    {...register("password")}
+                    {...register("password", { required: true})}
                 />
                     {showPassword ? (
                         <FaEyeSlash size={25} onClick={() => setShowPassword(!showPassword)} />
@@ -64,6 +75,8 @@ export default function FormStudentLogin() {
                         <FaEye size={25} onClick={() => setShowPassword(!showPassword)} />
                     )}
                 </div>
+
+                {errors.password && <p className='message-error'>Senha obrigatorio</p>}
 
             </div>
 

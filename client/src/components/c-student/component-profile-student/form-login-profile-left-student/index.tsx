@@ -31,6 +31,8 @@ export default function FormLoginProfileStudent({ dataStudent }: HomeStudentProp
         password: '',
     });
 
+    
+
     useEffect(() => {
         const ConsultDataLogin = async (IDStudent: any) => {
             try {
@@ -48,6 +50,7 @@ export default function FormLoginProfileStudent({ dataStudent }: HomeStudentProp
         }
 
         ConsultDataLogin(IDStudent);
+
     }, []);
 
 
