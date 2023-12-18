@@ -114,8 +114,6 @@ export default function FormInfoProfileStudente({ dataStudent }: HomeStudentProp
                         <select id="city" className="input-profile-student"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })} >
-
-                            <option value='' ></option>
                             <option value='Mogi das Cruzes'>Mogi das Cruzes</option>
                             <option value='Suzano'>Suzano</option>
                             <option value='Poá'>Poá</option>
@@ -138,8 +136,6 @@ export default function FormInfoProfileStudente({ dataStudent }: HomeStudentProp
                         <select id="Course" className="input-profile-student"
                         value={formData.course}
                         onChange={(e) => setFormData({ ...formData, course: e.target.value })}>
-
-                            <option value='' ></option>
                             <option value="Ciencia da computacao">Ciência da Computação</option>
                             <option value="Sistemas de informacao">Sistemas de Informação</option>
                             <option value="Engenharia de software">Engenharia de Software</option>
@@ -168,9 +164,7 @@ export default function FormInfoProfileStudente({ dataStudent }: HomeStudentProp
 
                         <select id="semester" className="input-profile-student"
                         value={formData.semester}
-                        onChange={(e) => setFormData({ ...formData, semester: e.target.value })}
-                        >
-                            <option value='' ></option>
+                        onChange={(e) => setFormData({ ...formData, semester: e.target.value })}>
                             <option value="1° Semestre">1° Semestre</option>
                             <option value="2° Semestre">2° Semestre</option>
                             <option value="3° Semestre">3° Semestre</option>

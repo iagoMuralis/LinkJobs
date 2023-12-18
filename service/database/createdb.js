@@ -4,7 +4,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
   database: 'postgres', // Use o banco de dados padrão 'postgres' para criar um novo banco
-  password: '',
+  password: '4321',
   port: 5432,
 });
 
@@ -32,7 +32,7 @@ async function createTables() {
     user: 'postgres',
     host: 'localhost',
     database: 'linkjobs',
-    password: '',
+    password: '4321',
     port: 5432,
   });
 
@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS public.jobs
 (
     id serial PRIMARY KEY,
     idcompany varchar(1000),
+    idjob serial,
     namecompany varchar(70),
     namejob varchar(100),
     locationjob varchar(60),
@@ -80,12 +81,24 @@ await linkjobsPool.query(`
 CREATE TABLE IF NOT EXISTS public.curriculum_student
 (
     id serial PRIMARY KEY,
-    IDStudent varchar(100),
+    idstudent integer,
     city varchar(35),
-    course varchar(20),
+    course varchar(30),
     semester varchar(60),
-    telephone varchar(20),
+    telephone varchar(35),
     portfolio varchar(100)
+);
+`);
+
+await linkjobsPool.query(`
+CREATE TABLE IF NOT EXISTS public.confirmed_job
+(
+    id serial PRIMARY KEY,
+    idcompany integer,
+    idjob integer,
+    idstudent integer,
+    namestudent
+
 );
 `);
 

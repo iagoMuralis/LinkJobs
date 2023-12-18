@@ -1,8 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './showJobs-style.css'
+import { set } from 'date-fns';
+import { FunctionCadasterJob } from '../function-home-student';
 
 interface jobsPropsStudent{
     onClose:()=> void;
+    IDStudent: number;
+    nameStudent: string;
+    idJob: number;
+    idCompany: number;
     titleJob: string;
     nameCompanyJob: string;
     locationJob: string;
@@ -13,15 +19,41 @@ interface jobsPropsStudent{
 
 
 
-export default function ShowJobs({ onClose, titleJob, nameCompanyJob, locationJob, descriptionJob, dateJob  }:jobsPropsStudent ) {
+export default function ShowJobs({ onClose, IDStudent, nameStudent, idCompany, idJob, titleJob, nameCompanyJob, locationJob, descriptionJob, dateJob  }:jobsPropsStudent ) {
 
     const [isShowJobsActive, setIsShowJobsActive] = useState(true);
+    const [jobConfirmed, setJobConfirmed] = useState(false);
+    const idjob:number = ({ idJob } = {idJob}).idJob;
 
+    useEffect(() => {
+        const localStorageValue = localStorage.getItem(`jobConfirmed_${idJob}`);
+        if (localStorageValue === 'true') {
+          setJobConfirmed(true);
+        }
+      }, [idJob]);
 
+      useEffect(() => {
+        if (jobConfirmed) {
+          localStorage.setItem(`jobConfirmed_${idJob}`, 'true');
+        }
+      }, [jobConfirmed, idJob]);
+   
+    
+    
     const closeShowJobs = () => {
         setIsShowJobsActive(false);
         onClose(); // Chama a função de fechamento fornecida por props
     };
+
+
+    const clickConfirmJob = (idCompany: number, idJob: number, titleJob: string, IDStudent: number, nameStudent: string):void => { 
+         if(jobConfirmed === false){
+             FunctionCadasterJob(idCompany, idJob, titleJob, IDStudent, nameStudent)
+         }
+        setJobConfirmed(true)      
+    }
+
+    console.log(idCompany)
 
     return (
         isShowJobsActive && (
@@ -46,6 +78,7 @@ export default function ShowJobs({ onClose, titleJob, nameCompanyJob, locationJo
                         <p className="title-show-location-company">
                             {dateJob}
                         </p>
+                        
                     </div>
 
                     <div className="show-functions-jobs">
@@ -56,8 +89,10 @@ export default function ShowJobs({ onClose, titleJob, nameCompanyJob, locationJo
                     </div>
 
                     <div className="box-buttons-show-jobs">
-                        <button className="sent-show-jobs">
-                            Tenho Interesse
+
+
+                        <button className={jobConfirmed ? "sent-show-jobs sent-show-jobs-red" : "sent-show-jobs"} onClick={() => clickConfirmJob(idCompany, idjob, titleJob, IDStudent, nameStudent)}>
+                            {jobConfirmed  ? "Candidatado" : "Candidatar"}
                         </button>
 
                         <button className="closed-show-jobs" onClick={closeShowJobs}>

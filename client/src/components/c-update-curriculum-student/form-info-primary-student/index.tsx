@@ -39,9 +39,6 @@ const onSubmit = (data: DataInput) => {
         FunctionRegisterCurriculum(dataID);
         FunctionSetCurriculumStudent(IDStudent)
         navigate('/student', {state:dataStudent})
-        
-        
-    
 }
 
 

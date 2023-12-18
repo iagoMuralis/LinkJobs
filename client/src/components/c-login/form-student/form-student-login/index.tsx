@@ -34,12 +34,11 @@ export default function FormStudentLogin() {
 
             if(!dataStudent.curriculum){
                 navigate('/updatestudent', {state: dataStudent})
-            }else{
-                navigate('/student', {state: dataStudent})
             }
+             else{
+                 navigate('/student', {state: dataStudent})
+             }
 
-
-            
         } catch (error) {
             if (data.password && data.email) {
                 setErrorLogin(true)

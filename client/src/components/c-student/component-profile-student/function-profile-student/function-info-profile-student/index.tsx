@@ -4,7 +4,6 @@ export const FunctionConsultDataInfoCurriculum = async (IDStudent:string)  => {
     try{
         const response = await api.get(`/profile/consult/datacurriculum/${IDStudent}`)
         const resultDataCurriculum = response.data.user;
-        console.log('teste', resultDataCurriculum)
         return resultDataCurriculum
         
     }catch(error){

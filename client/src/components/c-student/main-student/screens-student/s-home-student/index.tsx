@@ -3,7 +3,6 @@ import BoxJobs from '../../../component-student/box-jobs'
 import './homestudent-style.css'
 
 import { FunctionConsultJobsStudent } from '../../../component-student/function-home-student';
-import { FunctionConsultDataBaseInfoPrimaryStudent } from '../../../component-student/function-verification-database-info-student';
 
 
 interface HomeStudentProps {
@@ -11,6 +10,11 @@ interface HomeStudentProps {
 }
 
 interface Job {
+    idcompany: string;
+    idjob: number,
+    idCompany: number,
+    IDStudent: number,
+    nameStudent: string,
     namejob: string;
     namecompany: string;
     locationjob: string;
@@ -22,15 +26,23 @@ interface Job {
 export default function HomeStudent({ dataStudent }: HomeStudentProps) {
 
     const [itemJob, setItemJob] = useState<Job[]>([]);
+    const IDStudent = dataStudent.id
+    const nameStudent = dataStudent.name 
+    
     
     useEffect(() => {
         const ConsultJobsStudent = async () => {
             const resultJobs: Job[] = await FunctionConsultJobsStudent();
             setItemJob(resultJobs);
+            
         }
         ConsultJobsStudent();
 
     }, [])
+
+    
+
+
 
     return (
         <main className="container-home-jobs">
@@ -43,14 +55,18 @@ export default function HomeStudent({ dataStudent }: HomeStudentProps) {
             <div className="content-home-jobs">
 
                 {itemJob.map((item, index) => (
+                    
                     <BoxJobs
                         key={index}
+                        idjob={item.idjob}
+                        idCompany={item.idcompany}
+                        nameStudent={nameStudent}
+                        IDStudent={IDStudent}
                         titleJob={item.namejob}
                         nameCompanyJob={item.namecompany}
                         locationJob={item.locationjob}
                         dateJob={item.date}
                         descriptionJob={item.descriptionjob}
-                        
                     />
                 ))}
 

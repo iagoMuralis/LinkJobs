@@ -5,6 +5,10 @@ import ShowJobs from '../show-jobs';
 
 interface jobsPropsStudent{
     titleJob: string;
+    IDStudent: number;
+    idCompany: number;
+    nameStudent: string,
+    idjob: number;
     nameCompanyJob: string;
     locationJob: string;
     descriptionJob: string;
@@ -22,7 +26,6 @@ export default function BoxJobs(props: jobsPropsStudent){
     const closeShowJobs = () => {
         setShowJobs(false);
     };
-    
 
     return(
         
@@ -54,7 +57,7 @@ export default function BoxJobs(props: jobsPropsStudent){
                 </button>
             </div>
 
-            {showJobs && <ShowJobs onClose={closeShowJobs} titleJob={props.titleJob} nameCompanyJob={props.nameCompanyJob} locationJob={props.locationJob} descriptionJob={props.descriptionJob} dateJob={props.dateJob}/>}
+            {showJobs && <ShowJobs onClose={closeShowJobs}  IDStudent={props.IDStudent} nameStudent={props.nameStudent} idCompany={props.idCompany} idJob={props.idjob} titleJob={props.titleJob} nameCompanyJob={props.nameCompanyJob} locationJob={props.locationJob} descriptionJob={props.descriptionJob} dateJob={props.dateJob}/>}
         </div>
     )
     
