@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const registerCurriculumStudent = require('./../../../controller/student/curriculum')
-const setStateCurriculumStudent = require('../../../controller/student/curriculum')
+const curriculum = require('./../../../controller/student/curriculum')
 
-router.post('/register/student', registerCurriculumStudent.RegisterCurriculumStudent)
-router.put('/setcurriculum/student/:IDStudent', setStateCurriculumStudent.SetStateCurriculumStudent)
+router.post('/register/student', curriculum.RegisterCurriculumStudent)
+router.put('/setcurriculum/student/:IDStudent', curriculum.SetStateCurriculumStudent)
+router.get('/consult/student/:IDStudent',curriculum.ConsultCurriculumStudent )
 
 
 module.exports = router

@@ -96,9 +96,9 @@ CREATE TABLE IF NOT EXISTS public.confirmed_job
     id serial PRIMARY KEY,
     idcompany integer,
     idjob integer,
+    namejob varchar(100),
     idstudent integer,
-    namestudent
-
+    namestudent varchar(100)
 );
 `);
 

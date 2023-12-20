@@ -59,15 +59,15 @@ export default function RegisterJobs({ dataCompany }: RegisterJobsProps) {
 
                         <div className="box-input-register-jobs">
                             <label htmlFor="" className='name-label-input-register-jobs'>Titulo da vaga</label>
-                            <input type="" placeholder="Digite.." required className='input-register-jobs' 
-                            {...register("nameJob")}
+                            <input type="" placeholder="Digite.." required maxLength={30} autoComplete="off" className='input-register-jobs' 
+                            {...register("nameJob", { maxLength: 30 })}
                             />
                         </div>
 
                         <div className="box-input-register-jobs">
                             <label htmlFor="" className='name-label-input-register-jobs'>localização</label>
-                            <input type="" placeholder="Digite.." required className='input-register-jobs'
-                            {...register("locationJob")}
+                            <input type="" placeholder="Digite.." required maxLength={30} autoComplete="off"  className='input-register-jobs'
+                            {...register("locationJob", { maxLength: 30 })}
                             />
                         </div>
 
@@ -77,8 +77,8 @@ export default function RegisterJobs({ dataCompany }: RegisterJobsProps) {
 
                         <div className="box-input-register-jobs">
                             <label htmlFor="" className='name-label-input-register-jobs'>Descrição</label>
-                            <textarea placeholder="Digite.." required className='textarea-register-jobs'
-                            {...register("descriptionJob")}
+                            <textarea placeholder="Digite.." required maxLength={100} autoComplete="off" className='textarea-register-jobs'
+                            {...register("descriptionJob", { maxLength: 100 })}
                             />
                         </div>
 

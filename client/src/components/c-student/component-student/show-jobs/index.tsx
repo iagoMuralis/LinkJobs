@@ -14,46 +14,48 @@ interface jobsPropsStudent{
     locationJob: string;
     dateJob:string;
     descriptionJob: string;
-
 }
 
 
-
-export default function ShowJobs({ onClose, IDStudent, nameStudent, idCompany, idJob, titleJob, nameCompanyJob, locationJob, descriptionJob, dateJob  }:jobsPropsStudent ) {
+export default function ShowJobs({ onClose, IDStudent, nameStudent, idCompany, idJob, titleJob, nameCompanyJob, locationJob, descriptionJob, dateJob }:jobsPropsStudent ) {
 
     const [isShowJobsActive, setIsShowJobsActive] = useState(true);
     const [jobConfirmed, setJobConfirmed] = useState(false);
     const idjob:number = ({ idJob } = {idJob}).idJob;
 
     useEffect(() => {
-        const localStorageValue = localStorage.getItem(`jobConfirmed_${idJob}`);
+        const localStorageValue = localStorage.getItem(`jobConfirmed_${IDStudent}_${idJob}`);
         if (localStorageValue === 'true') {
           setJobConfirmed(true);
         }
-      }, [idJob]);
+      }, [IDStudent, idJob]);
 
       useEffect(() => {
         if (jobConfirmed) {
-          localStorage.setItem(`jobConfirmed_${idJob}`, 'true');
+          localStorage.setItem(`jobConfirmed_${IDStudent}_${idJob}`, 'true');
         }
-      }, [jobConfirmed, idJob]);
+      }, [jobConfirmed, IDStudent, idJob]);
    
     
     
     const closeShowJobs = () => {
         setIsShowJobsActive(false);
-        onClose(); // Chama a função de fechamento fornecida por props
+        onClose(); 
     };
 
 
-    const clickConfirmJob = (idCompany: number, idJob: number, titleJob: string, IDStudent: number, nameStudent: string):void => { 
+    const clickConfirmJob =  async (idCompany: number, idJob: number, titleJob: string, IDStudent: number, nameStudent: string):void => { 
          if(jobConfirmed === false){
-             FunctionCadasterJob(idCompany, idJob, titleJob, IDStudent, nameStudent)
+            try {
+                const response = await FunctionCadasterJob(idCompany, idJob, titleJob, IDStudent, nameStudent); 
+                setJobConfirmed(response);
+              } catch (error) {
+                console.error('Erro ao candidatar usuário a vaga escolhida', error);
+                setJobConfirmed(false);
+              }
          }
-        setJobConfirmed(true)      
+           
     }
-
-    console.log(idCompany)
 
     return (
         isShowJobsActive && (

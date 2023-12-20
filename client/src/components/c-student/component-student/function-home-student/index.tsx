@@ -15,16 +15,19 @@ export const FunctionConsultJobsStudent = async () =>{
   export const FunctionCadasterJob = async (idCompany: number, idJob: number, titleJob: string, IDStudent: number, nameStudent: string) => {
       try{
 
-        const response = await api.post('/register/jobs/student', {
+        const response = await api.post('/confirmedjob/register/jobs/student', {
             idCompany: idCompany,
             idJob: idJob,
             titleJob: titleJob,
             IDStudent: IDStudent,
             nameStudent: nameStudent,
-        });   
+        });  
+        
+        return true; 
 
     }catch(error){
-        console.error('erro ao candidatar usaurio a vaga escolhida', error)
+        console.error('erro ao candidatar usuario a vaga escolhida', error)
+        return false;
     }
   }
 

@@ -4,7 +4,6 @@ export const FunctionConsultDataLogin = async (IDStudent:string)  => {
     try{
         const response = await api.get(`/profile/consult/datalogin/${IDStudent}`)
         const resultDataLogin = response.data.user;
-        console.log(resultDataLogin)
         return resultDataLogin
         
     }catch(error){

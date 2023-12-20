@@ -10,6 +10,10 @@ const routerProfileStudent = require('./modules/routes/student/profile')
 
 const routerCurriculumStudent = require('./modules/routes/student/curriculum')
 
+
+
+const routerConfirmedJob = require('./modules/routes/confirmedJob')
+
 const cors = require('cors');
 
 app.use(cors());
@@ -20,6 +24,9 @@ app.use('/student', routerStudent)
 
 app.use('/jobs', routerJobs);
 app.use('/curriculum', routerCurriculumStudent )
+
+
+app.use('/confirmedjob',routerConfirmedJob)
 
 
 app.use('/profile', routerProfileStudent)

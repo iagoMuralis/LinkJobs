@@ -54,7 +54,7 @@ async function DeleteJob(req, res) {
         );
 
         res.status(201).json(result.rows);
-        console.log('vaga da empresa consultada')
+        console.log('vaga da empresa consultada novamente')
        
     } catch (error) {
         console.error('erro ao consulta vaga cadastrada da empresa');

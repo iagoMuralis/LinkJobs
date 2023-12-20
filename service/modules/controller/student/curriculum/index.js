@@ -36,7 +36,48 @@ async function SetStateCurriculumStudent(req, res){
     }
 }
 
+
+
+
+async function ConsultCurriculumStudent(req, res){
+
+    const {IDStudent} = req.params;
+
+    try{
+        const result = await pool.query(
+            `SELECT
+            cs.id AS curriculum_id,
+            cs.idstudent,
+            cs.city,
+            cs.course,
+            cs.semester,
+            cs.telephone,
+            cs.portfolio,
+            ls.id AS login_id,
+            ls.name,
+            ls.university,
+            ls.email
+        FROM
+            curriculum_student cs
+        JOIN
+            login_student ls ON cs.idstudent = ls.id
+        WHERE
+            cs.idstudent = $1`,
+        [IDStudent]
+        )
+
+        res.status(200).json(result.rows[0])
+
+
+    }catch(error){
+        console.error('erro ao buscar curriculo do usuario', error)
+        res.status(500).send("erro no servidor");
+    }
+
+}
+
 module.exports ={
 RegisterCurriculumStudent,
-SetStateCurriculumStudent
+SetStateCurriculumStudent,
+ConsultCurriculumStudent
 }

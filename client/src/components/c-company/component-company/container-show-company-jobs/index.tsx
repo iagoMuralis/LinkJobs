@@ -20,6 +20,7 @@ export default function ShowJobsCompany({ dataCompany }: consultJobsProps) {
 
 
     const [itemJob, setItemJob] = useState<consultJobsProps[]>([])
+    const [forceUpdate, setForceUpdate] = useState<boolean>(false);
 
 
     useEffect(() => {
@@ -28,7 +29,7 @@ export default function ShowJobsCompany({ dataCompany }: consultJobsProps) {
             setItemJob(resultJobs);
         }
         ConsultJobsCompany()
-    }, [])
+    }, [forceUpdate])
 
 
 
@@ -37,8 +38,7 @@ export default function ShowJobsCompany({ dataCompany }: consultJobsProps) {
     const handleDeleteJob = async (item: string) => {
         const IDJob = item.id;
         await functionDeleteJobsCompany(IDJob);
-        window.location.reload();
-
+        setForceUpdate(prevState => !prevState);
     }
 
 
