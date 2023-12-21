@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .box-title-profile-student{
@@ -21,6 +22,11 @@
     font-size: 2em;
 }
 
+@media(max-width:960px){
+    .title-profile-student{
+    font-size: 1.5em;
+    }
+}
 
 
 

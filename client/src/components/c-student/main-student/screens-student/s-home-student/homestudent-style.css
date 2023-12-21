@@ -33,5 +33,22 @@
     height: auto;
     
 }
+@media(max-width:1280px){
+    .content-home-jobs{
+        width: 100%;
+    }
+}
+
+@media(max-width:960px){
+    .title-top-screen{
+        font-size: 1.5em;
+    }
+    .box-jobs{
+        padding: 5px;
+    }
+    .data-jobs{
+        gap: 2px;
+    }
+}
 
 

@@ -31,7 +31,11 @@ export default function BoxJobs(props: jobsPropsStudent){
         
         <div className="box-jobs">
 
-            <img src={ImgEmpresa} className='img-company-job'/>
+
+            <div className="box-img-company-job">
+                    <img src={ImgEmpresa} className='img-company-job '/>
+            </div>
+            
 
             <div className="data-jobs">
                 <h1 className="title-jobs">

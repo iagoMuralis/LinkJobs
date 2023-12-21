@@ -16,9 +16,19 @@
     align-items: flex-start;
     
     padding: 10px;
-    
 }
 
 .container-right-form-profile{
     justify-content: center;
+}
+
+@media(max-width: 960px){
+    
+
+    .container-form-profile-student{
+        flex-direction: column;
+    }
+
+    
+    .
 }

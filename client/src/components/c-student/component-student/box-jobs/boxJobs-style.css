@@ -70,3 +70,35 @@
 
 
 
+@media(max-width:1280px){
+    .box-jobs{
+        width: 100%;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .box-img-company-job{
+        width: 100%;
+        padding-left: 15px;
+
+    }
+    .img-company-job{
+        height: 50px;
+    }
+
+    .box-jobs{
+        flex-direction: column;
+        gap: 10pxrem;
+    }
+    .button-show-jobs{
+        width: 8rem;
+        font-size: .9em
+    }
+    .box-button-show-jobs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

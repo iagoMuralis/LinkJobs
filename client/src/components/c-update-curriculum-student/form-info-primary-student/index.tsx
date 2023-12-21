@@ -53,7 +53,7 @@ const onSubmit = (data: DataInput) => {
 
                     <label htmlFor="" className="name-label-input-profile-student">Cidade</label>
 
-                        <select id="city" className="input-profile-student"  {...register('city', {required: true})}>
+                        <select id="city" className="input-profile-student input-profile-student-register-primary"  {...register('city', {required: true})}>
                             <option value='' > {errors.city && <p>Selecione a cidade</p>} </option>
                             <option value='Mogi das Cruzes'>Mogi das Cruzes - São Paulo</option>
                             <option value='Suzano'>Suzano - São Paulo</option>
@@ -70,7 +70,7 @@ const onSubmit = (data: DataInput) => {
 
                     <label htmlFor="" className="name-label-input-profile-student">Curso</label>
 
-                        <select id="Course" className="input-profile-student" {...register('course', {required: true})}>
+                        <select id="Course" className="input-profile-student input-profile-student-register-primary" {...register('course', {required: true})}>
 
                             <option value='' >{errors.course && <p>Selecione o curso</p>}</option>
                             <option value="Ciencia da computacao">Ciência da Computação</option>
@@ -91,7 +91,7 @@ const onSubmit = (data: DataInput) => {
 
                     <label htmlFor="" className="name-label-input-profile-student">Semestre atual</label>
 
-                        <select id="semester" className="input-profile-student" {...register('semester', {required: true})}>
+                        <select id="semester" className="input-profile-student input-profile-student-register-primary" {...register('semester', {required: true})}>
                             <option value='' >{errors.semester && <p> Selecione o semestre atual</p>}</option>
                             <option value="1° Semestre">1° Semestre</option>
                             <option value="2° Semestre">2° Semestre</option>
@@ -112,7 +112,7 @@ const onSubmit = (data: DataInput) => {
                         <InputMask
                             mask="(99) 99999-9999"
                             id="telephone"
-                            className="input-profile-student" 
+                            className="input-profile-student input-profile-student-register-primary" 
                             {...register('telephone', {required:true})}
                         />
                         {errors.telephone && <p style={{color:'white'}}>Digite um telefone</p>}
@@ -124,7 +124,7 @@ const onSubmit = (data: DataInput) => {
                     <label htmlFor="" className="name-label-input-profile-student">Portfólio</label>
 
 
-                        <input type="text" className="input-profile-student" {...register('portfolio', {required:true})}/>
+                        <input type="text" className="input-profile-student input-profile-student-register-primary" {...register('portfolio', {required:true})}/>
                         {errors.portfolio && <p style={{color: 'white'}}>Digite seu porfolio publico</p>}
 
                 </div>

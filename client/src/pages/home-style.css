@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
     
 }
 
@@ -22,5 +23,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 7.5rem;
-    
+    padding: 0 1rem
+}
+
+@media(max-width:768px){
+    .main-home{
+        margin-top: 5rem;
+    }
 }

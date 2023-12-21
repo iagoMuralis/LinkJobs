@@ -25,8 +25,8 @@
     background-color: var(--color-two);
 
     border-radius: 20px;
-    width: 60%;
-    height: 70%;
+    min-width: 60%;
+    min-height: 70%;
 
 }
 
@@ -40,17 +40,17 @@
 }
 
 .title-text-curriculum-candidate{
-    font-size: 2.5em;
-    color: var(--color-main);
-}
-
-.sub-title-text-curriculum-candidate{
     font-size: 2em;
     color: var(--color-main);
 }
 
+.sub-title-text-curriculum-candidate{
+    font-size: 1.4em;
+    color: var(--color-main);
+}
+
 .text-curriculum-candidate{
-   font-size: 1.5em;
+   font-size: 1.2em;
    font-weight: bold;
   
    color: black;
@@ -80,4 +80,93 @@
 
 .button-closed-show-candidate:hover{
     border-color: white;
+}
+
+@media(max-width:1280px){
+
+    .container-show-candidate{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5rem;
+        align-items: center;
+        gap: 2rem;
+        width: 90%;
+        height: 80%;
+    
+    }
+
+    .title-text-curriculum-candidate {
+        font-size: 1.5em;
+    }
+    .sub-title-text-curriculum-candidate {
+        font-size: 1.2em;
+    }
+    .text-curriculum-candidate {
+        font-size: 1em;
+    }
+    
+    .img-profile-candidate {
+        height: 10rem;{
+
+        }
+
+
+}
+
+@media(max-width:768px){
+
+    .showCandidate {
+        background-color: var(--color-main);
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .container-show-candidate{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+        height: auto;
+    
+    }
+
+    .title-text-curriculum-candidate {
+        font-size: 1.3em;
+    }
+    .sub-title-text-curriculum-candidate {
+        font-size: 1.1em;
+    }
+    .text-curriculum-candidate {
+        font-size: 1em;
+    }
+    
+    .img-profile-candidate {
+        height: 7rem;
+
+    }
+    .button-closed-show-candidate {
+        font-size: 1em;
+        width: 80%;
+        height: 4rem;
+    }
+
+
+}
+
+@media(max-width:525px){
+    .img-profile-candidate {
+        height: 5rem;
+    }
+    .title-text-curriculum-candidate {
+        font-size: 1.1em;
+    }
+    .sub-title-text-curriculum-candidate {
+        font-size: 1em;
+    }
+    .text-curriculum-candidate {
+        font-size: 0.9em;
+    }
 }

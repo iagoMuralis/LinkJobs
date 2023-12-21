@@ -121,7 +121,6 @@ export default function FormLoginProfileStudent({ dataStudent }: HomeStudentProp
                             value={formData.university}
                             onChange={(e) => setFormData({ ...formData, university: e.target.value })}
                         >
-                            <option value='' ></option>
                             <option value='Universidade Mogi das Cruzes (UMC)'>Universidade Mogi das Cruzes (UMC)</option>
                             <option value='Universidade Braz Cubas (UBC)'>Universidade Braz Cubas (UBC)</option>
                             <option value='Fatec Mogi das Cruzes'>Fatec Mogi das Cruzes</option>

@@ -59,7 +59,6 @@ export default function FormStudentLogin() {
                 <input type="email" className="input-form" placeholder='Digite seu email...'
                     {...register("email", {required: true})}
                 />
-
                 {errors.email && <p className='message-error'>Email obrigatorio</p>}
             </div>
 

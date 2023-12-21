@@ -60,7 +60,7 @@
 
 .name-student-confirmed-job-card{
     color: white;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 
@@ -114,3 +114,31 @@
    
 }
 
+@media(max-width:1280px){
+    .box-card-student-confirmed-job{
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+
+    .box-profile-image-name-student-title-job-confirmed-job{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .box-card-student-confirmed-job{
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .button-delete-confirmed-job-card{
+        width: 9rem;
+        font-size: 0.9em;
+    }
+
+    .img-profile-student-confirmedJob-card{
+        height: 60px;
+    }
+}

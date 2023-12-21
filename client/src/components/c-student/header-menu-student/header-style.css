@@ -63,6 +63,8 @@ header {
     cursor: pointer;
 }
 
+
+
 .header-menu-low {
     width: 100%;
     height: auto;
@@ -103,6 +105,10 @@ header {
     cursor: pointer;
 }
 
+.closed-box-button-name-header-low{
+    display: none;
+}
+
 .text-button-menu-header-low {
     font-size: 1em;
     font-family: 'Ubuntu', sans-serif;
@@ -120,4 +126,43 @@ header {
     font-size: 1.1em;
     color: var(--color-three);
     font-family: 'Ubuntu', sans-serif;
+}
+
+@media (max-width:1440px) {
+    .container-buttons-header-low{
+        gap: 3rem;
+        width: auto;
+    }
+}
+
+@media (max-width:768px) {
+
+
+    .header-menu-low {
+        height: 100vh;
+        width: 30vh;
+        position: absolute;
+        right: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.637);
+    }
+
+    .container-buttons-header-low{
+        gap: 3rem;
+        width: auto;
+        flex-direction: column;
+        
+    }
+
+    .closed-box-button-name-header-low{
+        display: flex;
+        margin-bottom: 3rem;
+    }
+
+    .box-input-search-menu{
+        display: none;
+    }
+
+    .name-company-student{
+        display: none;
+    }
 }

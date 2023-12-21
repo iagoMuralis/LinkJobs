@@ -129,4 +129,19 @@
     
 }
 
+@media(max-width:960px){
+    .img-profile-student{
+        height: 10rem;
+    }
+    .container-left-form-profile, .container-right-form-profile{
+        width: 100%;
+    }
+    .form-info-profile-student, .form-login-profile-student{
+        width: 100%;
+    }
+    .input-profile-student{
+        min-width: 100%;
+    }
+}
+
 

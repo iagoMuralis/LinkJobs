@@ -1,4 +1,4 @@
-import { FaBars, FaBell, FaUser, FaHome, FaSignOutAlt, FaSearch } from 'react-icons/fa';
+import { FaBars, FaBell, FaUser, FaHome, FaSignOutAlt, FaSearch, FaTimes  } from 'react-icons/fa';
 
 import ImgLogo from './../../../assets/LinkJobs LOGO Sem Fundo.png'
 
@@ -37,7 +37,7 @@ export default function MenuCompany({ handleComponentChange, dataCompany}: MenuP
             <div className="header-menu-top">
 
                 <div className="box-header-img-logo-text">
-                    <img src={ImgLogo} alt="" className='img-logo-header' />
+                <a href="http://localhost:5173/"><img src={ImgLogo}  className='img-logo-header' /></a>
                     <p>empresa</p>
                 </div>
 
@@ -67,6 +67,12 @@ export default function MenuCompany({ handleComponentChange, dataCompany}: MenuP
 
                 <div className="header-menu-low">
                     <div className="container-buttons-header-low">
+
+                        <div className="box-button-name-header-low closed-box-button-name-header-low" onClick={() => setShowHeaderLow(!showHeaderLow) }>
+                            <button className='button-menu-header-low'><FaTimes size={20} /></button>
+                            <p className='text-button-menu-header-low'>Fechar</p>
+                        </div>
+                        
 
                         <div className="box-button-name-header-low" onClick={() => handleComponentClick(<HomeCompany />)}>
                             <button className='button-menu-header-low'><FaHome size={20} /></button>
